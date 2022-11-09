@@ -4,4 +4,4 @@ meu primeiro projeto.
 
 ## ✒️ Autores
 
-- **1asty** -- [1asty](https://github.com/linkParaPerfil)
+- **1asty** -- [1asty](https://github.com/1asty)
