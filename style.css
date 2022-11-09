@@ -1,0 +1,214 @@
+/* o simbolo * é universal e esses comandos servem para tirar as margens e os preenchimentos por isso usar os numeros 0*/
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+
+
+
+}
+
+:root {
+  --card-tittle-color-border: #746615;
+  --card-color-primary: #f7dd43;
+  --card-bg-color: #1D1C19;
+  --fundo-color: url(./assets/fundotela.svg);
+
+}
+
+body#blue {
+  --card-tittle-color-border: #338AF3;
+  --card-color-primary: #338AF3;
+  --card-bg-color: #202024;
+  --fundo-color: url(./assets/fundotelaazul.svg);
+
+}
+body#green {
+  --card-tittle-color-border: #047C3F;
+  --card-color-primary: #047C3F;
+  --card-bg-color: #1A1F1B;
+  --fundo-color: #202024 /*deus n quis q eu colocasse o fundo, amem */;
+
+}
+
+
+ul {
+ /* para tirar todos os pontos das listas */
+  list-style: none;
+
+
+}
+
+body * {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+background: #121214;
+background-image: var(--fundo-color);
+background-position-x: center;
+background-position-y: -715px;
+background-repeat: no;
+background-size: cover;
+
+
+
+}
+
+#app {
+
+/* (width: fit-content) serve para encaixar o conteudo na caixinha */ 
+width: fit-content;
+
+margin: 52px auto;
+
+
+
+
+}
+
+header {
+margin-bottom: 63px;
+text-align: center;
+
+
+
+}
+
+#cards {
+display: flex;
+flex-direction: column;
+gap: 32px;
+
+}
+
+
+
+#card1 {
+
+  
+  padding: 32px 23px;
+
+  /* o comando *text-align: serve para alinhar todos os elementos de texto */
+  text-align: center;
+  background: var(--card-bg-color);
+  border-bottom: 2px solid var(--card-color-primary);
+  border-radius: 6px;
+
+  /* border-radius (arredonda as bordas) e border-bottom ( as bordas de baixo ) */
+}
+
+#card1 h2 {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  /*align-items: serve para alinhar os itens sendo eles pro centro ou pros lados */
+
+
+  padding: 8px 16px;
+  border: 1px solid var(--card-tittle-color-border);
+  border-radius: 6px;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 33px;
+  color: var(--card-color-primary);
+
+
+}
+
+#card1 h2 span {
+  color: #E1E1E6;
+  font-size: 14px;
+  text-transform: uppercase;
+
+
+  
+}
+
+
+/* esse card ( #card1 ul foi feito para colocar a linha que fica entre os card */
+#card1 ul {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+   
+   width: 270px;
+
+
+}
+
+#card1 ul li {
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+/* justify-content: space_between; usei para dar espaço entre as imagens e os texto */
+
+}
+
+#card1 ul li + li {
+  padding-top: 24px;
+  border-top: 1px solid #323238;
+
+
+
+}
+
+#card1 ul li strong {
+
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 125%;
+
+  color: #E1E1E6;
+
+
+
+}
+
+#card1 h2:hover,
+#card1 ul li strong:hover,
+#card1 ul li img:hover {
+  transform: scale(1.2);
+
+
+}
+
+#card1 h2:hover,
+#card1 ul li strong:hover,
+#card1 ul li img:hover {
+  transition: transform 0.5s;
+
+
+}
+
+#card1 {
+  opacity: 0;
+  animation: aparecer 1.5s forwards;
+}
+
+@keyframes aparecer {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@media (min-width: 800px) {
+  #cards {
+    max-width: 670px; 
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+
+}
+
